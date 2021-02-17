@@ -1,0 +1,75 @@
+{
+    "name"              : "simtabi/laranail",
+    "license"           : "MIT",
+    "description"       : "Utility functions and helper methods",
+    "type"              : "library",
+    "keywords": [
+        "helpers",
+        "functions"
+    ],
+    "authors": [
+        {
+            "name": "Imani Manyara",
+            "email": "hello@imanimanyara.com",
+            "homepage": "https://www.imanimanyara.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "jasny/dotkey": "dev-master",
+        "phlak/strgen": "^3.0",
+        "nesbot/carbon": "^2.41",
+        "cocur/slugify": "^4.0",
+        "mccool/laravel-auto-presenter": "^7.5",
+        "ausi/slug-generator": "^v1.1.1",
+        "vincoweb/easy-php-file-info": "^v1.0.6",
+        "respect/validation": "^2.2.1",
+        "spatie/url": "^1.3.5",
+        "bjeavons/zxcvbn-php": "^1.2.0",
+        "giggsey/libphonenumber-for-php": "^8.12.18",
+        "gugglegum/memory-size": "^1.0.1"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Simtabi\\Laranail\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simtabi\\Laranail\\Providers\\LaranailServiceProvider"
+            ],
+            "aliases": {
+                "Avatar"                         : "Simtabi\\Laranail\\Facades\\AvatarFacade",
+                "BaseHelper"                     : "Simtabi\\Laranail\\Facades\\BaseHelperFacade",
+                "BreadcrumbsGenerator"           : "Simtabi\\Laranail\\Facades\\BreadcrumbsGeneratorFacade",
+                "BreadcrumbsManager"             : "Simtabi\\Laranail\\Facades\\BreadcrumbsManagerFacade",
+                "Countries"                      : "Simtabi\\Laranail\\Facades\\CountriesFacade",
+                "CustomResourceRegistrar"        : "Simtabi\\Laranail\\Facades\\CustomResourceRegistrarFacade",
+                "DashboardMenu"                  : "Simtabi\\Laranail\\Facades\\DashboardMenuFacade",
+                "EmailAbstract"                  : "Simtabi\\Laranail\\Facades\\EmailAbstractFacade",
+                "FileInfo"                       : "Simtabi\\Laranail\\Facades\\FileInfoFacade",
+                "Gravatar"                       : "Simtabi\\Laranail\\Facades\\GravatarFacade",
+                "Helpers"                        : "Simtabi\\Laranail\\Facades\\HelpersFacade",
+                "Humanize"                       : "Simtabi\\Laranail\\Facades\\HumanizeFacade",
+                "Language"                       : "Simtabi\\Laranail\\Facades\\LanguageFacade",
+                "LaravelSupport"                 : "Simtabi\\Laranail\\Facades\\LaravelSupportFacade",
+                "PageTitle"                      : "Simtabi\\Laranail\\Facades\\PageTitleFacade",
+                "SortItemsWithChildrenHelper"    : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
+                "StrHelpers"                     : "Simtabi\\Laranail\\Facades\\StrHelpersFacade",
+                "SystemManagement"               : "Simtabi\\Laranail\\Facades\\SystemManagementFacade",
+                "TypeConverter"                  : "Simtabi\\Laranail\\Facades\\TypeConverterFacade",
+                "URLFactory"                     : "Simtabi\\Laranail\\Facades\\URLFactoryFacade",
+                "Validate"                       : "Simtabi\\Laranail\\Facades\\ValidateFacade",
+                "YouTube"                        : "Simtabi\\Laranail\\Facades\\YouTubeFacade"
+            }
+        }
+    }
+}
+
+
+
+
