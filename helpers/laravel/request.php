@@ -165,3 +165,18 @@ if (!function_exists('isOnPage')) {
         return $result;
     }
 }
+
+if (!function_exists('isRoute')) {
+
+    /**
+     * If given route is equal to current route
+     *
+     * @param $route_name
+     * @return bool
+     */
+    function isRoute($route_name): bool
+    {
+        return Route::currentRouteName() === $route_name;
+    }
+
+}
