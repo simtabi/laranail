@@ -17,7 +17,13 @@
     ],
     "require": {
         "jasny/dotkey": "dev-master",
+        "ichtrojan/laravel-otp": "dev-master",
+        "dyrynda/laravel-model-uuid": "^6.4.0",
+        "ramsey/uuid": "^4.1.1",
+        "dyrynda/laravel-efficient-uuid": "^4.3.0",
+        "spomky-labs/otphp": "^v10.0.1",
         "phlak/strgen": "^3.0",
+        "malenkiki/token-generator": "dev-master",
         "nesbot/carbon": "^2.41",
         "cocur/slugify": "^4.0",
         "mccool/laravel-auto-presenter": "^7.5",
