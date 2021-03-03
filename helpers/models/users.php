@@ -27,7 +27,7 @@ if (!function_exists('getFormUsersList')) {
 
 if (!function_exists('isUserExists')) {
 
-    function isUserExists($value, $key = 'id', Model $usersModel)
+    function isUserExists($value, Model $usersModel, $key = 'id')
     {
         if ($usersModel::where($key, '=', $value)->exists()) {
             return true;
