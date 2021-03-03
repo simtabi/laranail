@@ -25,30 +25,10 @@ if (!function_exists('getFormUsersList')) {
 }
 
 
-if (!function_exists('isUserExists')) {
-
-    function isUserExists($value, Model $usersModel, $key = 'id')
-    {
-        if ($usersModel::where($key, '=', $value)->exists()) {
-            return true;
-        }
-        return false;
-    }
-}
-
-
 if (!function_exists('getUserInfo')) {
 
     function getUserInfo($request, $id, Model $usersModel){
         return modelInfo($request, $usersModel::find($id), '');
-    }
-}
-
-
-if (!function_exists('userExists')) {
-    function userExists($value, $key = 'id', Model $usersModel): bool
-    {
-        return $usersModel::where($key, '=', $value)->exists() ? true : false;
     }
 }
 
@@ -64,7 +44,7 @@ if (!function_exists('getUserData')) {
 if (!function_exists('getUserDataByUsername')) {
     function getUserDataByUsername($username, Model $usersModel): bool
     {
-        if (!userExists($username, 'username', $usersModel)) {
+        if (!userExists($username, $usersModel, 'username')) {
             return false;
         }
         return $usersModel::select('*')
@@ -74,7 +54,12 @@ if (!function_exists('getUserDataByUsername')) {
 }
 
 
-
+if (!function_exists('userExists')) {
+    function userExists($value, Model $usersModel, $key = 'id'): bool
+    {
+        return $usersModel::where($key, '=', $value)->exists() ? true : false;
+    }
+}
 
 
 
