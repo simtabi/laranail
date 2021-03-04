@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Arr;
+use Simtabi\Laranail\Supports\TypeConverter;
 
 if (!function_exists('existsInFilterKey')) {
     /**
@@ -256,5 +257,16 @@ if (!function_exists('getRandomArrayElement')) {
             $data[] = $item;
         }
         return TypeConverter::toObject($data[array_rand($data)]);
+    }
+}
+
+if (!function_exists('objIsEmpty')) {
+    /**
+     * @param $obj
+     * @return bool|object
+     */
+    function objIsEmpty($obj): bool
+    {
+        return (array)$obj === 0;
     }
 }
