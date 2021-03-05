@@ -37,7 +37,8 @@
         "mattkingshott/axiom": "^3.1.1",
         "propaganistas/laravel-phone": "^4.2",
         "laravel-validation-rules/phone": "^1.6",
-        "irfa/php-sn-generator": "dev-master"
+        "irfa/php-sn-generator": "dev-master",
+        "gpslab/base64uid": "dev-master"
     },
     "require-dev": {
 
