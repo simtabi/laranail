@@ -11,7 +11,7 @@ class StrHelpers
      * @param string $name
      * @return string
      */
-    public static function generate(string $name) : string
+    public static function generateWordInitials(string $name) : string
     {
         $words = explode(' ', $name);
         if (count($words) >= 2) {
