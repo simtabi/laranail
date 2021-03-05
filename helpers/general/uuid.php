@@ -1,5 +1,6 @@
 <?php
 
+use GpsLab\Component\Base64UID\Generator\RandomCharGenerator;
 use GpsLab\Component\Base64UID\Base64UID;
 
 if (!function_exists('base64Uid')) {
@@ -12,4 +13,5 @@ if (!function_exists('base64Uid')) {
         return (new RandomCharGenerator($length, $charset))->generate();
     }
 }
+
 
