@@ -1422,7 +1422,7 @@ class Helpers
     }
 
 
-    public static function buildName($obj){
+    public static function buildFullName($obj){
 
         $firstName = ucfirst($obj->first_name);
         $lastName  = ucfirst($obj->last_name);
