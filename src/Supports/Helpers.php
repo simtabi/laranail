@@ -1422,7 +1422,7 @@ class Helpers
     }
 
 
-    public static function buildFullName($obj){
+    public static function buildFullName($obj, $substitute = false){
 
         $firstName = ucfirst($obj->first_name);
         $lastName  = ucfirst($obj->last_name);
@@ -1443,6 +1443,11 @@ class Helpers
                 $name = $email;
             }
         }
+
+        if (!$substitute && (empty($firstName) && empty($lastName))) {
+            return false;
+        }
+
         return $name;
 
     }
