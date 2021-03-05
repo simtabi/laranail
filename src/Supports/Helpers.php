@@ -1421,4 +1421,30 @@ class Helpers
         return !empty($input) || 1 === $input ? true : false;
     }
 
+
+    public static function buildName($obj){
+
+        $firstName = ucfirst($obj->first_name);
+        $lastName  = ucfirst($obj->last_name);
+        $username  = ucfirst($obj->username);
+        $email     = $obj->email;
+        $name      = null;
+
+        if (!empty($firstName) && !empty($lastName)) {
+            $name = sprintf("%s %s", ucwords($obj->first_name), ucwords($obj->last_name));
+        }else{
+            if (!empty($firstName)) {
+                $name = $firstName;
+            }elseif (!empty($lastName)) {
+                $name = $lastName;
+            }elseif (!empty($username)) {
+                $name = $username;
+            }else{
+                $name = $email;
+            }
+        }
+        return $name;
+
+    }
+
 }
