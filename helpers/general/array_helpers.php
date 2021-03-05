@@ -267,6 +267,9 @@ if (!function_exists('objIsEmpty')) {
      */
     function objIsEmpty($obj): bool
     {
-        return (array)$obj === 0;
+        if (! ((array)$obj)) {
+            return true;
+        }
+        return false;
     }
 }
