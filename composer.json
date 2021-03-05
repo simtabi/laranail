@@ -36,7 +36,8 @@
         "simtabi/memory-size": "dev-master",
         "mattkingshott/axiom": "^3.1.1",
         "propaganistas/laravel-phone": "^4.2",
-        "laravel-validation-rules/phone": "^1.6"
+        "laravel-validation-rules/phone": "^1.6",
+        "irfa/php-sn-generator": "dev-master"
     },
     "require-dev": {
 
