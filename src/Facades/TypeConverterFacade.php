@@ -2,7 +2,7 @@
 
 namespace Simtabi\Laranail\Facades;
 
-use Simtabi\Pheg\Phegs\Libraries\DataTools\TypeConverter;
+use Simtabi\Pheg\Phegs\DataTools\TypeConverter;
 use Illuminate\Support\Facades\Facade;
 use Simtabi\Laranail\Supports\Languages;
 
