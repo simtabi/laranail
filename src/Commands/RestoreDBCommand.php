@@ -33,18 +33,24 @@ class RestoreDBCommand extends Command
     public function handle()
     {
 
-        $this->info('Starting DB restore process...');
-
-        if (LaravelTools::clearCache()) {
-            $this->info('Successfully cleared application Cache!');
+        if ($this->clearCache()) {
+            $this->info('Starting DB restore process...');
 
             $this->call('migrate:fresh');
             $this->call('db:seed');
+
+            $this->info('Finished DB restoration successfully!');
+            $this->call('tidy');
         }
 
-        $this->info('Finished DB restoration successfully!');
-        $this->call('tidy');
-
         return 0;
+    }
+
+    private function clearCache(){
+        $this->call('tidy');
+        if (LaravelTools::clearCache()) {
+            $this->info('Successfully cleared application Cache!');
+        }
+        return true;
     }
 }
