@@ -59,7 +59,7 @@
                 "SortItemsWithChildrenHelper" : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
                 "LanguagesFacade"             : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
                 "LaravelTools"                : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
-                "DataTypeConverter"           : "Simtabi\\Laranail\\Facades\\DataTypeConverterFacade",
+                "TypeConverter"               : "Simtabi\\Laranail\\Facades\\TypeConverterFacade",
                 "Pheg"                        : "Simtabi\\Laranail\\Facades\\PhegFacade"
             }
         }
