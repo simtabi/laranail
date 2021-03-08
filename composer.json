@@ -56,7 +56,6 @@
                 "Simtabi\\Laranail\\Providers\\LaranailServiceProvider"
             ],
             "aliases": {
-                "SortItemsWithChildrenHelper" : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
                 "Languages"                   : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
                 "LaravelTools"                : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
                 "TypeConverter"               : "Simtabi\\Laranail\\Facades\\TypeConverterFacade",
