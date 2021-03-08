@@ -4,6 +4,7 @@ namespace Simtabi\Laranail\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Simtabi\DevTool\Commands\RestoreDBCommand;
 use Simtabi\Laranail\Commands\TidyApplicationCommand;
 use Simtabi\Laranail\Traits\LaranailTrait;
 use PrettyRoutes\ServiceProvider as PrettyRoutesServiceProvider;
@@ -51,6 +52,7 @@ class LaranailServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 TidyApplicationCommand::class,
+                RestoreDBCommand::class,
             ]);
             $this->registerPublishing();
         }
