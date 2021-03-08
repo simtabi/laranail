@@ -8,6 +8,7 @@ use Illuminate\Support\Collection;
 
 class SortItemsWithChildrenHelper
 {
+
     /**
      * @var Collection
      */

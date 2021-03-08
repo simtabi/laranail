@@ -13,7 +13,7 @@ if (!function_exists('oldInput')) {
         // lets get what we have stored in the database,
         // if we don't have any records,
         // return old form input value
-        $value = old($key, modelInfo($key, $Model, $default));
+        $value = old($key, get_model_info($key, $Model, $default));
         if ($returnBool){
             if (!empty($value)){
                 return true;

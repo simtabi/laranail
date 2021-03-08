@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'purge', 'as' => 'purge.', 'middleware' => ['web']], function(){
+Route::group(['prefix' => 'lara_tidy', 'as' => 'lara_tidy.', 'middleware' => ['web']], function(){
 
-    Route::get('/', ['name' => 'purge-app', 'uses' => function(){
+    Route::get('/', ['name' => 'all', 'uses' => function(){
         Artisan::call('optimize');
         Artisan::call('route:cache');
         Artisan::call('cache:clear');

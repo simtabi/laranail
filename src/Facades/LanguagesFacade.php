@@ -3,15 +3,15 @@
 namespace Simtabi\Laranail\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Simtabi\Pheg\Helpers\Components\ArrayTools\SortItemsWithChildrenHelper;
+use Simtabi\Laranail\Supports\Languages;
 
-class SortItemsWithChildrenHelperFacade extends Facade
+class LanguagesFacade extends Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return SortItemsWithChildrenHelper::class;
+        return Languages::class;
     }
 }

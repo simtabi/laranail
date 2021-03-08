@@ -22,7 +22,6 @@
         "ramsey/uuid": "^4.1.1",
         "dyrynda/laravel-efficient-uuid": "^4.3.0",
         "spomky-labs/otphp": "^v10.0.1",
-        "phlak/strgen": "^3.0",
         "nesbot/carbon": "^2.41",
         "intervention/validation": "^2.6.6",
         "cocur/slugify": "^4.0",
@@ -38,7 +37,9 @@
         "propaganistas/laravel-phone": "^4.2",
         "laravel-validation-rules/phone": "^1.6",
         "irfa/php-sn-generator": "dev-master",
-        "gpslab/base64uid": "dev-master"
+        "html2text/html2text": "^4.2",
+        "gpslab/base64uid": "dev-master",
+        "andrey-helldar/pretty-routes": "dev-main"
     },
     "require-dev": {
 
@@ -54,28 +55,9 @@
                 "Simtabi\\Laranail\\Providers\\LaranailServiceProvider"
             ],
             "aliases": {
-                "Avatar"                         : "Simtabi\\Laranail\\Facades\\AvatarFacade",
-                "BaseHelper"                     : "Simtabi\\Laranail\\Facades\\BaseHelperFacade",
-                "BreadcrumbsGenerator"           : "Simtabi\\Laranail\\Facades\\BreadcrumbsGeneratorFacade",
-                "BreadcrumbsManager"             : "Simtabi\\Laranail\\Facades\\BreadcrumbsManagerFacade",
-                "Countries"                      : "Simtabi\\Laranail\\Facades\\CountriesFacade",
-                "CustomResourceRegistrar"        : "Simtabi\\Laranail\\Facades\\CustomResourceRegistrarFacade",
-                "DashboardMenu"                  : "Simtabi\\Laranail\\Facades\\DashboardMenuFacade",
-                "EmailAbstract"                  : "Simtabi\\Laranail\\Facades\\EmailAbstractFacade",
-                "FileInfo"                       : "Simtabi\\Laranail\\Facades\\FileInfoFacade",
-                "Gravatar"                       : "Simtabi\\Laranail\\Facades\\GravatarFacade",
-                "Helpers"                        : "Simtabi\\Laranail\\Facades\\HelpersFacade",
-                "Humanize"                       : "Simtabi\\Laranail\\Facades\\HumanizeFacade",
-                "Language"                       : "Simtabi\\Laranail\\Facades\\LanguageFacade",
-                "LaravelSupport"                 : "Simtabi\\Laranail\\Facades\\LaravelSupportFacade",
-                "PageTitle"                      : "Simtabi\\Laranail\\Facades\\PageTitleFacade",
                 "SortItemsWithChildrenHelper"    : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
-                "StrHelpers"                     : "Simtabi\\Laranail\\Facades\\StrHelpersFacade",
-                "SystemManagement"               : "Simtabi\\Laranail\\Facades\\SystemManagementFacade",
-                "TypeConverter"                  : "Simtabi\\Laranail\\Facades\\TypeConverterFacade",
-                "URLFactory"                     : "Simtabi\\Laranail\\Facades\\URLFactoryFacade",
-                "Validate"                       : "Simtabi\\Laranail\\Facades\\ValidateFacade",
-                "YouTube"                        : "Simtabi\\Laranail\\Facades\\YouTubeFacade"
+                "LanguagesFacade"                : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
+                "LaravelTools"                   : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
             }
         }
     }

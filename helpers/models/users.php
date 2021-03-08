@@ -3,9 +3,9 @@
 use Simtabi\Laranail\Supports\TypeConverter;
 use Illuminate\Database\Eloquent\Model;
 
-if (!function_exists('getFormUsersList')) {
+if (!function_exists('get_form_usersList')) {
 
-    function getFormUsersList(Model $usersModel)
+    function get_form_usersList(Model $usersModel)
     {
         $results = [];
         $query   = $usersModel::select('*')->orderby('id', 'asc')->get()->toArray();
@@ -25,24 +25,24 @@ if (!function_exists('getFormUsersList')) {
 }
 
 
-if (!function_exists('getUserInfo')) {
+if (!function_exists('get_user_info')) {
 
-    function getUserInfo($request, $id, Model $usersModel){
-        return modelInfo($request, $usersModel::find($id), '');
+    function get_user_info($request, $id, Model $usersModel){
+        return get_model_info($request, $usersModel::find($id), '');
     }
 }
 
 
-if (!function_exists('getUserData')) {
-    function getUserData($userId, Model $usersModel){
+if (!function_exists('get_user_data')) {
+    function get_user_data($userId, Model $usersModel){
         return $usersModel::select('*')
             ->where('id', '=', trim($userId))
             ->orderby('id', 'desc')->get();
     }
 }
 
-if (!function_exists('getUserDataByUsername')) {
-    function getUserDataByUsername($username, Model $usersModel): bool
+if (!function_exists('get_user_data_by_username')) {
+    function get_user_data_by_username($username, Model $usersModel): bool
     {
         if (!userExists($username, $usersModel, 'username')) {
             return false;

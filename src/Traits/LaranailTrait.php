@@ -2,6 +2,7 @@
 
 namespace Simtabi\Laranail\Traits;
 
+use Simtabi\Laranail\Supports\LaravelTools;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -9,7 +10,8 @@ use Illuminate\Support\Str;
 use File;
 
 /**
- * @mixin ServiceProvider
+ * Trait LaranailTrait
+ * @package Simtabi\Laranail\Traits
  */
 trait LaranailTrait
 {
@@ -289,13 +291,9 @@ trait LaranailTrait
      * @param string $directory
      * @since 2.0
      */
-    public function autoloadHelpers(string $directory): void
+    public function autoloadHelpers(string $directory)
     {
-        $helpers = File::glob($directory . '/*.php');
-        foreach ($helpers as $helper) {
-            File::requireOnce($helper);
-        }
+        LaravelTools::autoload($directory);
     }
 
 }
-

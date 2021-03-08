@@ -5,6 +5,7 @@ namespace Simtabi\Laranail\Providers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Simtabi\Laranail\Traits\LaranailTrait;
+use PrettyRoutes\ServiceProvider as PrettyRoutesServiceProvider;
 
 class LaranailServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,6 @@ class LaranailServiceProvider extends ServiceProvider
 
         if (! $this->app->configurationIsCached()) {
             foreach ([
-                        'support',
                         'config',
                      ] as $fileName) {
                 $this->mergeConfigFrom(__DIR__.'/../../config/' . $fileName . '.php', $fileName);
@@ -29,7 +29,6 @@ class LaranailServiceProvider extends ServiceProvider
         }
 
         $this->app->register(BladeServiceProvider::class);
-        $this->app->register(ComposerServiceProvider::class);
 
         $path = __DIR__ . '/../../helpers/';
         $this->autoloadHelpers($path . 'cms');
@@ -49,10 +48,14 @@ class LaranailServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->app->runningInConsole()) {
+            $this->commands([
+                TidyApplicationCommand::class,
+            ]);
             $this->registerPublishing();
         }
 
         $this->registerRoutes();
+        $this->app->register(PrettyRoutesServiceProvider::class);
     }
 
     /**
@@ -67,11 +70,11 @@ class LaranailServiceProvider extends ServiceProvider
         ], 'subscribers-vue-component');
 
         $this->publishes([
-            __DIR__ . '/../../database/migrations' => database_path('migrations'),
+            __DIR__ . '/../../database/migrations'     => database_path('migrations'),
         ], 'subscribers-migrations');
 
         $this->publishes([
-            __DIR__.'/../../config/config.php' => config_path('laranail.php'),
+            __DIR__.'/../../config/config.php'         => config_path('laranail.php'),
         ], 'subscribers-config');
     }
 
