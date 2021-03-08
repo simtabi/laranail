@@ -17,7 +17,7 @@
     ],
     "require": {
         "jasny/dotkey": "dev-master",
-        "simtabi/phegs": "dev-master",
+        "simtabi/pheg": "dev-master",
         "ichtrojan/laravel-otp": "dev-master",
         "dyrynda/laravel-model-uuid": "^6.4.0",
         "ramsey/uuid": "^4.1.1",
