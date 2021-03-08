@@ -60,6 +60,7 @@
                 "LaravelTools"                : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
                 "TypeConverter"               : "Simtabi\\Laranail\\Facades\\TypeConverterFacade",
                 "Copyright"                   : "Simtabi\\Laranail\\Facades\\CopyrightFacade",
+                "Ensue"                        : "Simtabi\\Laranail\\Facades\\EnsueFacade",
                 "Pheg"                        : "Simtabi\\Laranail\\Facades\\PhegFacade"
             }
         }
