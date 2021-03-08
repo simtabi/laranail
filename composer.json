@@ -56,10 +56,10 @@
                 "Simtabi\\Laranail\\Providers\\LaranailServiceProvider"
             ],
             "aliases": {
-                "SortItemsWithChildrenHelper"    : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
-                "LanguagesFacade"                : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
-                "LaravelTools"                   : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
-                "Phegs"                          : "Simtabi\\Laranail\\Facades\\PhegsFacade"
+                "SortItemsWithChildrenHelper" : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
+                "LanguagesFacade"             : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
+                "LaravelTools"                : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
+                "Pheg"                        : "Simtabi\\Laranail\\Facades\\PhegFacade"
             }
         }
     }

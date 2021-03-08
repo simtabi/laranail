@@ -3,15 +3,15 @@
 namespace Simtabi\Laranail\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Simtabi\Pheg\Phegs;
+use Simtabi\Pheg\Pheg;
 
-class PhegsFacade extends Facade
+class PhegFacade extends Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return Phegs::class;
+        return Pheg::class;
     }
 }
