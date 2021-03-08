@@ -17,6 +17,7 @@
     ],
     "require": {
         "jasny/dotkey": "dev-master",
+        "simtabi/phegs": "dev-master",
         "ichtrojan/laravel-otp": "dev-master",
         "dyrynda/laravel-model-uuid": "^6.4.0",
         "ramsey/uuid": "^4.1.1",
@@ -58,6 +59,7 @@
                 "SortItemsWithChildrenHelper"    : "Simtabi\\Laranail\\Facades\\SortItemsWithChildrenHelperFacade",
                 "LanguagesFacade"                : "Simtabi\\Laranail\\Facades\\LanguagesFacade",
                 "LaravelTools"                   : "Simtabi\\Laranail\\Facades\\LaravelToolsFacade",
+                "Phegs"                          : "Simtabi\\Laranail\\Facades\\PhegsFacade"
             }
         }
     }
