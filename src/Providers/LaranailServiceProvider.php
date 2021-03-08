@@ -4,6 +4,7 @@ namespace Simtabi\Laranail\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Simtabi\Laranail\Commands\TidyApplicationCommand;
 use Simtabi\Laranail\Traits\LaranailTrait;
 use PrettyRoutes\ServiceProvider as PrettyRoutesServiceProvider;
 

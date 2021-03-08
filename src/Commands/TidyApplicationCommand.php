@@ -1,6 +1,6 @@
 <?php
 
-namespace Simtabi\DevTool\Commands;
+namespace Simtabi\Laranail\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
