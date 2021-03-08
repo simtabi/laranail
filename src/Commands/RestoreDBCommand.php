@@ -37,10 +37,10 @@ class RestoreDBCommand extends Command
 
         if (LaravelTools::clearCache()) {
             $this->info('Successfully cleared application Cache!');
-        }
 
-        $this->call('migrate:fresh');
-        $this->call('db:seed');
+            $this->call('migrate:fresh');
+            $this->call('db:seed');
+        }
 
         $this->info('Finished DB restoration successfully!');
         $this->call('tidy');
