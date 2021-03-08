@@ -44,7 +44,7 @@ if (!function_exists('get_user_data')) {
 if (!function_exists('get_user_data_by_username')) {
     function get_user_data_by_username($username, Model $usersModel): bool
     {
-        if (!userExists($username, $usersModel, 'username')) {
+        if (!user_exists($username, $usersModel, 'username')) {
             return false;
         }
         return $usersModel::select('*')
@@ -54,8 +54,8 @@ if (!function_exists('get_user_data_by_username')) {
 }
 
 
-if (!function_exists('userExists')) {
-    function userExists($value, Model $usersModel, $key = 'id'): bool
+if (!function_exists('user_exists')) {
+    function user_exists($value, Model $usersModel, $key = 'id'): bool
     {
         return $usersModel::where($key, '=', $value)->exists() ? true : false;
     }
