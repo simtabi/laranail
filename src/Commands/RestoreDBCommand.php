@@ -43,6 +43,7 @@ class RestoreDBCommand extends Command
         $this->call('db:seed');
 
         $this->info('Finished DB restoration successfully!');
+        $this->call('tidy');
 
         return 0;
     }
