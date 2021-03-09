@@ -40,7 +40,7 @@
         "irfa/php-sn-generator": "dev-master",
         "html2text/html2text": "^4.2",
         "gpslab/base64uid": "dev-master",
-        "garygreen/pretty-routes": "dev-main"
+        "garygreen/pretty-routes": "dev-master"
     },
     "require-dev": {
 
