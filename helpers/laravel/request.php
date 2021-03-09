@@ -9,7 +9,8 @@ if (!function_exists('isCurrentRouteRoute')) {
      * @param null $return
      * @return bool|null
      */
-    function isCurrentRouteRoute($request, $return = null){
+    function isCurrentRouteRoute($request, $return = null): ?bool
+    {
         if (Request::is($request)){
             return !empty($return) ? $return :  true;
         }
@@ -23,7 +24,8 @@ if (!function_exists('isEditURI')) {
      * @param null $Method
      * @return bool
      */
-    function isEditURI($request, $Method = null){
+    function isEditURI($request, $Method = null): ?bool
+    {
         $value = request()->$request;
         if (!empty($Method) && $Method->exists()){
             $Method = $Method::find($value);
@@ -56,7 +58,8 @@ if (!function_exists('isRoute')) {
      * @param $request
      * @return bool
      */
-    function isRoute($request){
+    function isRoute($request): bool
+    {
         if ((Request::route()->getName() == Route::current()->getName()) && Route::current()->getName() == $request){
             return true;
         }else{
@@ -84,7 +87,8 @@ if (!function_exists('getCurrentRoute')) {
     /**
      * @return object
      */
-    function getCurrentRoute(){
+    function getCurrentRoute(): ?object
+    {
         return TypeConverter::toObject([
             'request' => [
                 'name'   => Request::route()->getName(),
@@ -98,7 +102,8 @@ if (!function_exists('getCurrentRoute')) {
 }
 
 if (!function_exists('isURLSegment')) {
-    function isURLSegment($segment, $position = 0){
+    function isURLSegment($segment, $position = 0): bool
+    {
         if (Request::segment($position) === $segment){
             return true;
         }
@@ -111,7 +116,8 @@ if (!function_exists('getRequestValue')) {
      * @param $key
      * @return bool|mixed
      */
-    function getRequestValue($key){
+    function getRequestValue($key): ?bool
+    {
         $value = request()->$key;
         if (!empty($value)){
             return $value;
@@ -126,7 +132,8 @@ if (!function_exists('isSetUrlParamValue')) {
      * @param $value
      * @return bool
      */
-    function isSetUrlParamValue($request, $value){
+    function isSetUrlParamValue($request, $value): ?bool
+    {
         return app('request')->input($request) === $value;
     }
 }
@@ -137,7 +144,8 @@ if (!function_exists('activeURLClass')) {
      * @param $value
      * @return string
      */
-    function activeURLClass($request, $value){
+    function activeURLClass($request, $value): ?string
+    {
         return isSetUrlParamValue($request, $value) ? ' active ' : '';
     }
 }

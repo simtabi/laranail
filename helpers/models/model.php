@@ -2,7 +2,7 @@
 
 if (!function_exists('get_model_info')) {
 
-    function get_model_info($request, $Model, $default = ''): string
+    function get_model_info($request, $Model, $default = ''): ?string
     {
         $output = null;
         if (isset($Model->$request)){

@@ -41,7 +41,8 @@ if (!function_exists('selectStatus')) {
      * @param $key
      * @return string
      */
-    function selectStatus($oldValue, $key){
+    function selectStatus($oldValue, $key): ?string
+    {
         return (old($key) === $oldValue) && !empty($oldValue) ? ' checked ' : '';
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\MessageBag;
 
 if (!function_exists('getErrorMsg')) {
-    function getErrorMsg($key, $msgClass = 'error-msg', $wrapperClass = 'has-error', $bag = 'errors'): string
+    function getErrorMsg($key, $msgClass = 'error-msg', $wrapperClass = 'has-error', $bag = 'errors'): ?string
     {
         if(Session::has($bag)) {
             $errors = Session::get($bag, new MessageBag);

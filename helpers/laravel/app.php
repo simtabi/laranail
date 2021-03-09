@@ -5,7 +5,8 @@ if (!function_exists('appUrl')) {
      * @param bool $echo
      * @return string
      */
-    function appUrl($echo = false){
+    function appUrl($echo = false): ?string
+    {
         $url = rtrim(env('APP_URL'), '/').'/';
         if ($echo){
             echo $url;
@@ -21,7 +22,7 @@ if (!function_exists('platform_path')) {
      * @param string|null $path
      * @return string
      */
-    function platform_path($path = null): string
+    function platform_path($path = null): ?string
     {
         return base_path('platform/' . $path);
     }

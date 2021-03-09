@@ -5,13 +5,13 @@ use Illuminate\Database\Eloquent\Model;
 
 if (!function_exists('get_form_usersList')) {
 
-    function get_form_usersList(Model $usersModel)
+    function get_form_usersList(Model $usersModel): ?array
     {
         $results = [];
         $query   = $usersModel::select('*')->orderby('id', 'asc')->get()->toArray();
 
         if (count($query) < 1) {
-            return$results;
+            return $results;
         }
         else{
             foreach ($query as $key => $item) {
@@ -27,7 +27,8 @@ if (!function_exists('get_form_usersList')) {
 
 if (!function_exists('get_user_info')) {
 
-    function get_user_info($request, $id, Model $usersModel){
+    function get_user_info($request, $id, Model $usersModel): ?string
+    {
         return get_model_info($request, $usersModel::find($id), '');
     }
 }

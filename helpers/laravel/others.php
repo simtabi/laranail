@@ -57,7 +57,7 @@ if (!function_exists('scan_folder')) {
      * @param array $ignoreFiles
      * @return array
      */
-    function scan_folder(string $path, $ignoreFiles = [])
+    function scan_folder(string $path, $ignoreFiles = []): ?array
     {
         try {
             if (File::isDirectory($path)) {

@@ -9,7 +9,7 @@ if (!function_exists('exists_in_filterKey')) {
      *
      * @param $key
      * @param $value
-     * @return null
+     * @return null|mixed
      */
     function exists_in_filterKey($key, $value = null)
     {
@@ -22,7 +22,7 @@ if (!function_exists('join_in_filterKey')) {
      * Appends passed value if condition is true
      *
      * @param $value
-     * @return null
+     * @return null|mixed
      */
     function join_in_filterKey(...$value)
     {
@@ -42,7 +42,7 @@ if (!function_exists('remove_from_filterKey')) {
      * @param $key
      * @param $oldValues
      * @param $value
-     * @return null
+     * @return null|mixed
      */
     function remove_from_filterKey($key, $oldValues, $value)
     {
